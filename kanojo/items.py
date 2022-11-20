@@ -7,6 +7,13 @@ import scrapy
 
 
 class MovieItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+    pass
+
+class PersonItem(scrapy.Item):
+    pass
+
+class StudioItem(scrapy.Item):
+    pass
+
+class SeriesItem(scrapy.Item):
     pass
