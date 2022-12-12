@@ -58,7 +58,7 @@ class MgstageSpider(SitemapSpider):
             'product_code': product_code,
             'release_date': release_date,
             'title_jp': response.xpath('//div[@class="common_detail_cover"]/h1/text()').get().replace('\n', '').strip(),
-            'title_en': '',
+            'title_en': None,
             'studio': studio,
             'label': label,
             'runtime': runtime,

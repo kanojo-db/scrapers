@@ -6,10 +6,14 @@ This repository contains web scrapers used for partially seeding and for periodi
 
 Currently, scrapers for the following are provided:
 
-* **MGStage**  
-  A sitemap scraper for movie information on mgstage.com
 * **DMM Actresses**  
   A scraper for actress information on actress.dmm.co.jp
+* **JAVLibrary**
+  A scraper for movie information on javlibrary.com
+* **MGStage**  
+  A sitemap scraper for movie information on mgstage.com
+* **Minna no AV**
+  A scraper for actress information on minnano-av.com
 * **u15dvdinfo**
   A sitemap scraper for movie information on u15dvdinfo.com
 

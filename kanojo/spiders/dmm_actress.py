@@ -1,5 +1,4 @@
 import scrapy
-from scrapy.linkextractors import LinkExtractor
 
 class ActressSpider(scrapy.Spider):
     name = "dmm_actress"
@@ -9,14 +8,11 @@ class ActressSpider(scrapy.Spider):
     def parse(self, response):
         for sel in response.xpath('//a[@class="p-list-actress__link"]/@href'):
             url = response.urljoin(sel.extract())
-            if not url.startswith('https://actress.dmm.co.jp'):
-                url = 'https://actress.dmm.co.jp' + url
             yield scrapy.Request(url, callback = self.parse_actress_detail)
 
-        next_page = response.xpath('//div[@class="p-box-pagenationArea"]/ul/li[@class="p-box-pagenation__btn p-box-pagenation__btn--arrow"][@style="display:;"]/a/@href').extract_first()
+        next_page = response.xpath('//div[@class="p-box-pagenationArea"]/ul/li[@class="p-box-pagenation__btn p-box-pagenation__btn--arrow"][@style="display:;"]/a/@href')
         if next_page:
-            if not next_page.startswith('https://actress.dmm.co.jp'):
-                next_page = 'https://actress.dmm.co.jp' + next_page
+            next_page = response.urljoin(next_page.extract())
             yield scrapy.Request(next_page, callback = self.parse)
 
 
