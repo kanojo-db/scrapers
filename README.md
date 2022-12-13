@@ -8,13 +8,13 @@ Currently, scrapers for the following are provided:
 
 * **DMM Actresses**  
   A scraper for actress information on actress.dmm.co.jp
-* **JAVLibrary**
+* **JAVLibrary**  
   A scraper for movie information on javlibrary.com
 * **MGStage**  
   A sitemap scraper for movie information on mgstage.com
-* **Minna no AV**
+* **Minna no AV**  
   A scraper for actress information on minnano-av.com
-* **u15dvdinfo**
+* **u15dvdinfo**  
   A sitemap scraper for movie information on u15dvdinfo.com
 
 ## Requirements

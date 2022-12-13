@@ -57,9 +57,9 @@ SPIDER_MIDDLEWARES = {
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-# EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-# }
+EXTENSIONS = {
+    'scrapy.extensions.SentryLogging': -1,
+}
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
@@ -96,3 +96,5 @@ TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
 FEED_EXPORT_ENCODING = "utf-8"
 IMAGES_STORE = "./covers"
 DELTAFETCH_ENABLED = True
+
+SENTRY_DSN="https://8525147683fb45bdbff2c0cdba74c437@o4504320317259776.ingest.sentry.io/4504320421527552"
